@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  baseApiUrl:  "https://my.api.mockaroo.com/"
 };
