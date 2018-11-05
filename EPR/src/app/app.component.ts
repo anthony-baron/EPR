@@ -3,7 +3,9 @@ import { Observable } from '../../node_modules/rxjs';
 
 //test data
 import { UserService } from './services/user.service';
+import { PetService } from './services/pet.service';
 import { User } from './classes/user';
+import { Pet } from './classes/pet'
 
 @Component({
   selector: 'app-root',
@@ -12,20 +14,29 @@ import { User } from './classes/user';
 })
 export class AppComponent {
 
-  constructor(private userService: UserService){}
-  title = 'EPR';
+  constructor(private userService: UserService,
+              private petService: PetService){}
+  title = 'EPR - Emergency Pet Rescue';
 
   public users: User[];
+  public pets: Pet[];
 
   ngOnIt(){
     
   }
 
-  getData(){
+  getUserData(){
     this.userService.getAllUsers()
     .subscribe((data) => {
       this.users = data;
     });
-    console.log('I am users', this.users);
   }
+
+  getPetData(){
+    this.petService.getAllPets()
+    .subscribe((data)=> {
+      this.pets = data;
+    })
+  }
+
 }

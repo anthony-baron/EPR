@@ -30,10 +30,7 @@ export class UserService {
 
  //get all users - base + swap with real endpoint later
  public getAllUsers(): Observable<User[]>{
-   return this.http.get<User[]>(this.baseApiURL + 'dbo_user.json/mockUsers?key=937c3910', this.httpOptions)
+   return this.http.get<User[]>(this.baseApiURL + 'dbo_users.json/mockUsers?key=937c3910', this.httpOptions)
   
- }
- public getBaseEndpoint(){
-   
  }
 }
