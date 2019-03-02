@@ -9,5 +9,7 @@ export class Pet {
     HealthInfo: string;
     Location: string;
     Rescued: boolean;
+    Latitude: number;
+    Longitude: number;
     
 }

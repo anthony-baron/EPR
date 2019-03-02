@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 
-//import user class to create observables
 import { Pet } from '../classes/pet'
 import { Observable } from '../../../node_modules/rxjs';
 import { catchError } from '../../../node_modules/rxjs/operators';
@@ -10,9 +9,7 @@ import { catchError } from '../../../node_modules/rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class PetService {
-
-  constructor(private http: HttpClient) { }
+export class GoogleMapsServiceService {
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -22,13 +19,7 @@ export class PetService {
   };
 
   public baseApiURL: string = environment.baseApiUrl;
+  public baseGoogleApiURL: string = environment.baseGoogleApiURL;
 
-  //get all users - base + swap with real endpoint later
-  public getAllPets(): Observable<Pet[]> {
-    return this.http.get<Pet[]>(this.baseApiURL + 'dbo_pets.json?key=937c3910', this.httpOptions)
-  }
-
-  public getPetByID(petID: number): Observable<Pet>{
-    return this.http.get<Pet>(this.baseApiURL + 'dbo_pets/' + petID + '.json?key=937c3910')
-  }
+  constructor(private http: HttpClient) { }
 }
