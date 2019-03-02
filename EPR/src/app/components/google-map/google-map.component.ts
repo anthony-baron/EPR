@@ -20,10 +20,7 @@ export class GoogleMapComponent implements OnInit {
   constructor(private petService: PetService) { }
 
   ngOnInit() {
-    this.petService.getPetByID(this.pet.Pet_ID)
-    .subscribe((data)=>{
-
-    });
+    
 
     var mapProp = {
       //Grab location from pet object
