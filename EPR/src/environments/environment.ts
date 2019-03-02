@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseApiUrl:  "https://my.api.mockaroo.com/"
+  baseApiUrl:  "https://my.api.mockaroo.com/",
+  baseGoogleApiURL: "https://maps.googleapis.com/maps/api/"
 };
 
 /*
