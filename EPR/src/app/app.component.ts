@@ -22,7 +22,8 @@ export class AppComponent {
   public pets: Pet[];
 
   ngOnIt(){
-    
+    this.getPetData();
+    console.log('PETS', this.pets)
   }
 
   getUserData(){
