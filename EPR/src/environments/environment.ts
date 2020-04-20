@@ -5,7 +5,11 @@
 export const environment = {
   production: false,
   baseApiUrl:  "https://my.api.mockaroo.com/",
-  baseGoogleApiURL: "https://maps.googleapis.com/maps/api/"
+  //baseGoogleApiURL: "https://maps.googleapis.com/maps/api/"
+  baseGoogleApiURL: "https://maps.googleapis.com/maps/api/staticmap?center=40.714%2c%20-73.998&zoom=12&size=400x400&key=AIzaSyDkDZe8Z9ucJ1_8OR5lFAuJNTcKRFaTpeg"
+
+  //AIzaSyDkDZe8Z9ucJ1_8OR5lFAuJNTcKRFaTpeg
+  //https://maps.googleapis.com/maps/api/staticmap?center=40.714%2c%20-73.998&zoom=12&size=400x400&key=
 };
 
 /*
