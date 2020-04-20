@@ -20,9 +20,11 @@ export class AppComponent {
 
   public users: User[];
   public pets: Pet[];
+  public firstPet: Pet;
 
   ngOnIt(){
-    
+    this.getPetData();
+    console.log('I am pet object on app comp', this.pets)
   }
 
   getUserData(){
@@ -36,6 +38,8 @@ export class AppComponent {
     this.petService.getAllPets()
     .subscribe((data)=> {
       this.pets = data;
+      this.firstPet = this.pets[0];
+      console.log('PETS', this.pets)
     })
   }
 
